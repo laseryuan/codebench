@@ -20,8 +20,8 @@ import ipdb; ipdb.set_trace()
 
 Example
 ```
-cd ~/projects/study/debugger/python/
-python ./examples/use_ipdb.py
+cd ~/python/
+python ./code/examples/use_ipdb.py
 my_var="OK"
 print my_var
 dir(my_var)
