@@ -1,0 +1,3 @@
+[submodule "inspector/inspector"]
+	path = inspector/inspector
+	url = git@github.com:laseryuan/inspector.git
