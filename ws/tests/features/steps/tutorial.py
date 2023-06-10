@@ -10,5 +10,6 @@ def step_impl(context):
 
 @then('behave will test it for us!')
 def step_impl(context):
+    my_var = 10 / 3
     import ipdb; ipdb.set_trace()
     assert context.failed is False

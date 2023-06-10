@@ -4,5 +4,7 @@ def inc(x):
 
 
 def test_answer():
+    value = 4
     import ipdb; ipdb.set_trace()
-    assert inc(3) == 5
+    from IPython import embed; embed(colors="neutral")
+    assert inc(value) == 5
