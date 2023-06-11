@@ -1,4 +1,10 @@
 ## 
+Run tests
+```
+docker_run --rm --name ws --network host lasery/ws bash
+cd ws
+nox -s lint tests
+```
 
 ## Initialize project
 ```
@@ -7,12 +13,10 @@ vi Dockerfile
 docker build -t lasery/ws .
 ```
 
+update poetry
 ```
-docker_run --rm --name ws --network host lasery/ws bash
-cd ws
 poetry install
 pre-commit install
-nox -s lint tests
 ```
 
 ## Usage
