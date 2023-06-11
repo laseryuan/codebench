@@ -1,3 +1,6 @@
 [submodule "inspector/inspector"]
 	path = inspector/inspector
 	url = git@github.com:laseryuan/inspector.git
+[submodule "ws/ws"]
+	path = ws/ws
+	url = https://github.com/lewoudar/ws
