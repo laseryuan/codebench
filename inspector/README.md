@@ -1,25 +1,34 @@
-docker_run devcpp:amd64 bash -l
+setup
+```
+docker_run lasery/devcpp bash -l
 ln -s /opt/cling/include/cling ./
-ln -s /tmp/inspector/include ../
-
-cat test.cpp
-inspector prebuild test.cpp
-
-clang++ -o test-proc $(inspector print-cflags) -std=c++11 test.cpp
-inspector repl
-
-# let program connect to repl (in another session)
-./test-proc
+export PYTHONPATH=/tmp/clang/bindings/python
+```
 
 # development
-export PYTHONPATH=/tmp/clang/bindings/python
-ln -s /opt/cling/include/cling ./
+build
+```
+cd inspector/build
+    cd inspector
+    mkdir build
+    cd build
 
-cd inspector
-mkdir build
-cd build
 cmake -DCMAKE_PREFIX_PATH="../inst" ..
 cmake --build .
+```
+
+let program connect to repl (in another session)
+```
 ./inspector repl
+```
+
+prebuild & build
+```
 ./inspector prebuild ../test/test.cpp
+clang++ -o test-proc $(./inspector print-cflags) -std=c++11  ../test/test.cpp
+```
+
+connect
+```
 ./test-proc
+```
