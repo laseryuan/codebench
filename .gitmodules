@@ -1,3 +1,6 @@
+[submodule "lopkn/project-10"]
+	path = lopkn/project-10
+	url = https://github.com/lopkn/project-10.git
 [submodule "inspector/inspector"]
 	path = inspector/inspector
 	url = git@github.com:laseryuan/inspector.git

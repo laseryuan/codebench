@@ -21,3 +21,9 @@ add repo to codebench as submodule
 ```
 git submodule add git@github.com:laseryuan/$REPO.git $REPO/$REPO
 ```
+
+build image
+```
+docker build -t lasery/$REPO .
+docker push lasery/$REPO
+```
