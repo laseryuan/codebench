@@ -4,6 +4,7 @@ REPO=\
 mkdir $REPO
 cd $REPO
 git clone \
+mv $REPO app
 ```
 
 ```
